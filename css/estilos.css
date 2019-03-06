@@ -1,5 +1,6 @@
 /*naranja = d35d33*/
-
+/* naranja oscuro = 681C10 */
+/* azul = 1A3263 */
 body
 {
   font-family: Helvetica;
@@ -33,6 +34,7 @@ h2
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero-image
@@ -57,6 +59,7 @@ h2
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project-date
@@ -78,17 +81,28 @@ h2
 
 .project-details
 {
-  width: 500px;
+  width: 50%;
+}
+
+.project-imageWrapper
+{
+  width: 50%;
+}
+
+.project-imageWrapper img
+{
+  max-width: 100%;
 }
 
 .header 
 {
-  background-color: #681c10;
+  background: linear-gradient(to right, #d35d33, #681C10) ;
   color: white;
   display: flex;
   height: 70px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 ol,
@@ -151,13 +165,19 @@ h1
   margin: 0;
 }
 
+hr
+{
+  margin: 0;
+}
+
 .footer
 {
   color: white;
-  background-color: #3a557c;
+  background: #3A557C;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer img
@@ -184,8 +204,8 @@ h1
 
 .activity
 {
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -222,7 +242,7 @@ h1
 
 .contact
 {
-  background: #d35d33;
+  background: linear-gradient(to right, #d35d33, #681C10);
   color: white;
   height: 150px;
   display: flex;
@@ -231,6 +251,7 @@ h1
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .contact h3
@@ -267,27 +288,30 @@ h1
 
 .form-email input
 {
-  border-color: gray;
+  border-color: white;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   padding: 10px 20px 10px 25px;
   background-image: url('../images/envelope_gray.svg');
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 5px;
+  display: inline;
 }
 
 .form-email button
 {
-  display: block;
+  display: inline;
   border-style: solid;
-  background: transparent;
+  border-color: #3A557C;
+  background: #3A557C;
   color: white;
   padding: 10px 0;
   width: 100px;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: -.3em;
+  font-weight: 600;
 }
 
 .form-email h3
@@ -297,11 +321,162 @@ h1
 
 .container
 {
-  width: 1000px;
+  max-width: 1000px;
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+}
+
+
+@media screen and (max-width: 1024px)
+{
+  .container
+  {
+    padding: 0 1em;
+  }
+/*   .hero
+  {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+  h1
+  {
+    font-size: 2em;
+    z-index: 2;
+  }
+  .hero-image
+  {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  } */
+}
+
+@media screen and (max-width: 767px)
+{
+  .header
+  {
+    display: block;
+    height: auto;
+    padding-top: 0.8em;
+  }
+  .header ol 
+  {
+    display: initial;
+  }
+  .header ol li 
+  {
+    height: 50px;
+  }
+  .header a 
+  {
+    justify-content: center;
+  }
+  .header .logo 
+  {
+    text-align: center;
+  }
+  .project
+  {
+    display: block;
+  }
+  .project-details
+  {
+    width: auto;
+  }
+  .project-title
+  {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+  .project-date
+  {
+    font-size: 1em;
+    margin: .4em 0;
+  }
+  .project-description
+  {
+    font-size: .8em;
+  }
+  .project-imageWrapper
+  {
+    width: auto;
+    text-align: center;
+  }
+  .activity
+  {
+    width: auto;
+    flex-shrink: initial;
+  }
+  .activity img
+  {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .project-details
+  {
+    width: auto;
+    font-size: 12px;
+  }
+  .activity-detail
+  {
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+  .contact
+  {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+  .form-email button 
+  {
+    margin: 1em auto 1.1em;
+  }
+  .form-email h3 
+  {
+    margin-top: 0;
+  }
+  .footer
+  {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .footer img 
+  {
+    margin-top: 1em;
+    height: 3em;
+  }
+  .form-email button
+  {
+    margin-left: -.5em;
+  }
+}
+
+@media screen and (max-width:320px)
+{
+  .form-email input
+  {
+    width: 40%;
+  }
+  .form-email button
+  {
+    width: 20%;
+  }
 }
