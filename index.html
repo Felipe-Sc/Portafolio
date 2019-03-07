@@ -11,6 +11,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -31,14 +32,14 @@
         </nav>
       </div>
     </header>
-<!--     <section class="hero">
+    <section class="hero">
       <div class="container">
         <h1>
-          ¡Hola! Soy <strong> Felipe</strong>. <br /> <strong>publicista</strong> apasionado <br /> por el mundo digital, <br />  audiovisual y la lectura.
+          ¡Hola! Soy <strong> Felipe</strong>. <br /> <strong>Publicista</strong> apasionado <br /> por el mundo digital, <br />  audiovisual y la lectura.
         </h1>
         <img class="hero-image" src = "images/hero.png" height= "500" alt="Imagen principal del sitio">
       </div>
-    </section> -->
+    </section>
     <section id="portafolio" class="portfolio">
       <div class="container">
         <h2>Portafolio (Proyectos Destacados)</h2>
@@ -114,13 +115,16 @@
         <form action="" class="form-email">
           <h3>¿Creamos algo juntos?</h3>
           <input type="text" placeholder="Déjame tu email">
-        <button>Enviar</button>
+          <button>Enviar</button>
         </form>
         <div class= "social">
-          <a href="https://www.instagram.com/felipe___sc" class= "social-link instagram" target="_blank"></a>
-          <a href="https://www.linkedin.com/in/felipe-merchan-mercadeo-publicidad" class= "social-link linkedin" target="_blank"></a>
-          <a href="https://twitter.com/_FelipeSc_" class= "social-link twitter" target="_blank"></a>
-          <a href="https://www.facebook.com/DFelipe.Sc" class= "social-link facebook" target="_blank"></a>
+          <i class=""></i>
+          <i class=""></i>
+          <a href="https://www.linkedin.com/in/felipe-merchan-mercadeo-publicidad" target="_blank"><i class="icon-linkedin"></i></a>
+          <a href="https://twitter.com/_FelipeSc_" target="_blank"><i class="icon-twitter"></i></a>
+          <a href="https://github.com/Felipe-Sc" target="_blank"><i class="icon-github"></i></a>
+          <a href="https://www.instagram.com/felipe___sc" target="_blank"><i class="icon-instagram"></i></a>
+          <a href="https://www.facebook.com/DFelipe.Sc" target="_blank"><i class="icon-facebook"></i></a>
         </div>
       </div>
     </section>
@@ -130,9 +134,43 @@
            <img height= "30" src="images/isotipo_felipe_sc.svg" alt="Felipe Sc" />
         </div>
         <div>
-          <p>Designed with ❤ by <a href="https://twitter.com/_FelipeSc_" target="_blank">@_felipesc_</a></p>
+          <p class="footer-details">Designed with ❤ by <a href="https://twitter.com/_FelipeSc_" target="_blank">@_felipesc_</a></p>
         </div>
       </div>
     </footer>
+    <script>
+      const ipad = window.matchMedia('screen and (max-width: 767px)');
+      const menu = document.querySelector('.menu');
+      const burgerButton = document.querySelector('#burger-menu');
+
+      ipad.addListener(validation)
+
+      function validation (event)
+      {
+        if (event.matches)
+        {
+          burgerButton.addEventListener('click', hideShow);
+        }
+        else
+          burgerButton.removeEventListener('click', hideShow);
+        {
+
+        }
+      }
+
+      validation(ipad);
+
+      function hideShow()
+      {
+        if (menu.classList.contains('is-active'))
+        {
+        menu.classList.remove('is-active');
+        }
+        else
+        {
+        menu.classList.add('is-active');
+        }
+      }
+    </script>
   </body>
 </html>
