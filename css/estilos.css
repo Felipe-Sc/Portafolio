@@ -205,12 +205,12 @@ h1,
 h2,
 h3
 {
-  font-family: 'Open Sans', sans-serif; 
+  font-family: 'Open Sans', system-ui; 
 }
 
 p
 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', system-ui;
 }
 
 h1
@@ -220,6 +220,7 @@ h1
   line-height: 42px;
   letter-spacing: -.2px;
   margin: 0;
+  max-width: 500px;
 }
 
 .social a
