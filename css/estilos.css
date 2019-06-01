@@ -61,6 +61,7 @@ section h1 strong
 section h1
 {
   text-transform: initial;
+  width: 59%;
 }
 
 h2
@@ -553,12 +554,29 @@ h1
     font-size: 1.5em;
   }
 }
+@media screen and (max-width: 675px){
+  .hero {
+    padding: 1em 0;
+  }
+  section h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 570px){
+  .hero-image {
+    top: -2.5em;
+  }
+  section h1 {
+    font-size: 1.4em;
+  }
+}
 
 @media screen and (max-width: 480px)
 {
-  h1
+  section h1
   {
-    font-size: 1.2em;
+    width: 100%;
   }
   .hero-image
   {
@@ -612,6 +630,16 @@ h1
   }
 }
 
+@media screen and (min-width: 321px) and (max-width: 399px) {
+  .hero-image{
+    top: 0.6em;
+    right: -1em;
+  }
+  section h1 {
+    font-size: 1.2em;
+  }
+}
+
 @media screen and (max-width:320px)
 {
   h1
@@ -620,7 +648,7 @@ h1
   }
   .hero
   {
-    padding: 2em 1em 0;
+    padding: 2em 0 0;
     background: linear-gradient(to top, #d35d33, #1a3263);
   }
   .hero-image
